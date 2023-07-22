@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: hsla(257, 33%, 19%, 1);
+	--secondary-color: hsla(260, 19%, 6%, 1);
+	--gray-100: hsla(240, 9%, 89%, 1);
+	--gray-200: hsla(0, 0%, 85%, 1);
+	--gray-300: hsla(240, 7%, 78%, 1);
+}
+
+body {
+	background-color: var(--secondary-color);
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 267px 358px;
+	grid-template-rows: 267px 200px;
+	grid-template-areas: "l1 l2" "l1 l3";
+	gap: 32px;
+}
+
+.layout {
+	background-color: var(--primary-color);
+	border-radius: 9.6px;
+}
+
+.layout-one {
+	grid-area: l1;
+}
+
+.layout-two {
+	grid-area: l2;
+}
+.layout-three {
+	grid-area: l3;
+}
