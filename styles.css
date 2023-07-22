@@ -39,6 +39,11 @@ p {
 	font-weight: 400;
 }
 
+button {
+	appearance: none;
+	background-color: transparent;
+	border: 0;
+}
 .wrapper {
 	display: grid;
 	grid-template-columns: 267px 358px;
