@@ -7,6 +7,7 @@
 }
 
 :root {
+	font-size: 62.5%;
 	--primary-color: hsla(257, 33%, 19%, 1);
 	--secondary-color: hsla(260, 19%, 6%, 1);
 	--gray-100: hsla(240, 9%, 89%, 1);
@@ -15,10 +16,25 @@
 }
 
 body {
+	font-family: "Roboto";
 	background-color: var(--secondary-color);
 	display: grid;
 	place-items: center;
 	min-height: 100vh;
+}
+
+img {
+	width: var(--image-width);
+	aspect-ratio: 1;
+	border-radius: 9.6px;
+}
+
+h2 {
+	font-size: 2.4rem;
+}
+
+h3 {
+	font-size: 1.8rem;
 }
 
 .wrapper {
@@ -32,15 +48,38 @@ body {
 .layout {
 	background-color: var(--primary-color);
 	border-radius: 9.6px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.music-info {
+	display: flex;
+	color: var(--gray-100);
+	gap: 29px;
 }
 
 .layout-one {
+	--image-width: 190px;
 	grid-area: l1;
+	padding: 38px;
+}
+
+.layout-one .music-info {
+	flex-direction: column;
+}
+.layout-two .music-info,
+.layout-three .music-info {
+	align-items: center;
 }
 
 .layout-two {
+	--image-width: 85px;
 	grid-area: l2;
+	padding: 29px;
 }
 .layout-three {
+	--image-width: 85px;
 	grid-area: l3;
+	padding: 29px;
 }
