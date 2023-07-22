@@ -23,12 +23,6 @@ body {
 	min-height: 100vh;
 }
 
-img {
-	width: var(--image-width);
-	aspect-ratio: 1;
-	border-radius: 9.6px;
-}
-
 h2 {
 	font-size: 2.4rem;
 }
@@ -51,12 +45,13 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 28px;
 }
 
-.music-info {
-	display: flex;
-	color: var(--gray-100);
-	gap: 29px;
+.layout img {
+	width: var(--image-width);
+	aspect-ratio: 1;
+	border-radius: 9.6px;
 }
 
 .layout-one {
@@ -68,9 +63,19 @@ h3 {
 .layout-one .music-info {
 	flex-direction: column;
 }
+
+.layout-one .music-control {
+	justify-content: space-between;
+}
+
 .layout-two .music-info,
 .layout-three .music-info {
 	align-items: center;
+}
+
+.layout-two .music-control,
+.layout-three .music-control {
+	justify-content: space-around;
 }
 
 .layout-two {
@@ -82,4 +87,20 @@ h3 {
 	--image-width: 85px;
 	grid-area: l3;
 	padding: 29px;
+}
+
+.music-info {
+	display: flex;
+	color: var(--gray-100);
+	gap: 29px;
+}
+
+.music-control {
+	display: flex;
+	width: 100%;
+}
+
+.music-control img {
+	width: 32px;
+	cursor: pointer;
 }
