@@ -22,6 +22,7 @@ body {
 	display: grid;
 	place-items: center;
 	min-height: 100vh;
+	padding: 32px;
 }
 
 h2 {
@@ -149,4 +150,17 @@ button {
 	display: flex;
 	color: var(--gray-300);
 	justify-content: space-between;
+}
+
+@media (width < 720px) {
+	body {
+		padding: 4px;
+	}
+	.wrapper {
+		display: grid;
+		grid-template-columns: 358px;
+		grid-template-rows: 498px 267px 200px;
+		grid-template-areas: "l1" "l2" "l3";
+		gap: 32px;
+	}
 }
