@@ -21,6 +21,16 @@ $buttons.forEach(($button) => {
 			img.setAttribute("src", imgByType[type].src)
 			img.setAttribute("id", imgByType[type].id)
 			target.replaceChild(img, child)
+			return
+		}
+		if (type === "pf" || type === "pb") {
+			const barWidth = {
+				pf: "100%",
+				pb: "0%",
+			}
+			const $bar = document.querySelector(`#${layout}-bar`)
+			if (!$bar) return
+			$bar.style.setProperty("--time-width", barWidth[type])
 		}
 	})
 })
